@@ -1,0 +1,25 @@
+header{
+    background-color: #000;
+}
+nav.navbar{
+    height: 82px;
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+        height: inherit;
+
+        li{
+            color: white;
+            font-weight: 600;        
+            font-size: 24px;
+        }
+
+        img {
+            height: 150px;
+            padding-top: 60px;
+        }
+    }
+}
