@@ -1,5 +1,5 @@
 import React from 'react'
-import MarsRover from '../../components/MarsRover'
+import MarsRover from '../../components/Mars'
 import Rovers from '../../components/Rovers'
 import './styles.scss'
 
