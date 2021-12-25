@@ -1,0 +1,48 @@
+section.rovers {
+  background: #11186b;
+  background: linear-gradient(180deg, #11186b 0%, #350265 100%);
+  color: #fff;
+  .rovers-loading {
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 42px;
+    margin: 0;
+    padding: 2rem 1rem 1.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  h3 {
+    font-size: 32px;
+    text-transform: capitalize;
+    padding: 0 1rem 1.5rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  .rovers-page-container {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(5, auto);
+    width: 90%;
+    margin: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+
+    .rover-card {
+      width: 100%;
+      img {
+        width: inherit;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(3, auto);
+    }
+  }
+
+  .MuiPagination-ul {
+    justify-content: center;
+  }
+}
