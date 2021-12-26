@@ -1,13 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { EffectCoverflow, Pagination, Navigation  } from "swiper";
+import SwiperCore, { EffectCoverflow, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import 'swiper/css/navigation';
+import "swiper/css/navigation";
 
-
-SwiperCore.use([EffectCoverflow, Pagination, Navigation ]);
+SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const RoverImages = ({ photos }) => {
   return (
