@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Pagination from "@mui/material/Pagination";
 import RoversImages from "./RoversImages";
 import Cameras from "../Cameras";
-import DatePicker from "../DatePicker";
 
 const Pager = ({ roverType, images }) => {
   const [page, setPage] = useState(1);
@@ -35,6 +34,7 @@ const Pager = ({ roverType, images }) => {
           setImagesPerPage(filteredImages);
         }
       } else {
+        setCount(0);
         setNoResults(true);
       }
     }

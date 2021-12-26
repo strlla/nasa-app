@@ -12,7 +12,7 @@ const ROVERS = ["curiosity", "opportunity", "spirit"];
 const Rovers = () => {
   const [roversLoading, setRoversLoading] = useState(true);
   const [roverData, setRoverData] = useState();
-  
+
   const fetchRovers = async (params) => {
     setRoversLoading(true);
     try {
@@ -22,15 +22,15 @@ const Rovers = () => {
       const productsPromises = await Promise.all(promises);
       if (productsPromises) {
         const _roverData = [];
-        
-        productsPromises.map(({ data: { photos } }) => {          
+
+        productsPromises.map(({ data: { photos } }) => {
           _roverData.push(...photos);
         });
         setRoverData(_roverData);
         setRoversLoading(false);
       }
-    } catch(e) {
-      setRoversLoading(false)
+    } catch (e) {
+      setRoversLoading(false);
     }
   };
 
@@ -47,6 +47,7 @@ const Rovers = () => {
           {ROVERS.map((rover) => {
             return (
               <Pager
+                key={rover}
                 roverType={rover}
                 images={roverData.filter(
                   (r) => r.rover.name.toLowerCase() === rover.toLowerCase()

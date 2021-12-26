@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./styles.scss";
 
 const CAMERAS_BY_ROVER = {
@@ -19,7 +19,9 @@ const Cameras = ({ rover, updateImages, images }) => {
     <ul className="cameras">
       <li onClick={(e) => filterByCamera(e, "")}>All cameras</li>
       {CAMERAS_BY_ROVER[rover.toLowerCase()].map((camera) => (
-        <li onClick={(e) => filterByCamera(e, camera)} key={camera}>{camera}</li>
+        <li onClick={(e) => filterByCamera(e, camera)} key={camera}>
+          {camera}
+        </li>
       ))}
     </ul>
   );

@@ -6,12 +6,18 @@ import "./styles.scss";
 const DatePicker = ({ fetchRovers }) => {
   const [earthDate, setEarthDate] = useState({ day: "", month: "", year: "" });
   const [marsDate, setMarsDate] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const searchByDate = (isEarthDate) => {
-    if (isEarthDate) {
-      fetchRovers({ earthDate });
+    if (parseInt(earthDate.day) > 31 || parseInt(earthDate.month) > 12) {
+      setErrorMessage("Please, enter a valid date");
     } else {
-      fetchRovers({ sol: marsDate });
+      setErrorMessage("");
+      if (isEarthDate) {
+        fetchRovers({ earthDate });
+      } else {
+        fetchRovers({ sol: marsDate });
+      }
     }
   };
 
@@ -36,6 +42,7 @@ const DatePicker = ({ fetchRovers }) => {
         updateDate={onMarsDateChange}
         searchByDate={searchByDate}
       />
+      {errorMessage && <p className="date-error">{errorMessage}</p>}
     </div>
   );
 };
