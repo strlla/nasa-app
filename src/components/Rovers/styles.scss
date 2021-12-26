@@ -2,6 +2,10 @@ section.rovers {
   background: #11186b;
   background: linear-gradient(180deg, #11186b 0%, #350265 100%);
   color: #fff;
+  .rovers-wrapper {
+    text-align: center;
+    padding: 20px 0 20px;
+  }
   .rovers-loading {
     display: flex;
     justify-content: center;
@@ -17,8 +21,12 @@ section.rovers {
     font-size: 32px;
     text-transform: capitalize;
     padding: 0 1rem 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
+  }
+  .no-results {
+    text-align: center;
+    padding: 20px 0 20px;
   }
   .rovers-page-container {
     display: grid;
@@ -44,5 +52,12 @@ section.rovers {
 
   .MuiPagination-ul {
     justify-content: center;
+    padding-bottom: 10px;
+    button {
+      color: #fff;
+    }
+    svg {
+      fill: #fff;
+    }
   }
 }

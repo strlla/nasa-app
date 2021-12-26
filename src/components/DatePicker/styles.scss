@@ -1,0 +1,19 @@
+.date-picker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 20px;
+  row-gap: 10px;
+  .mars-date,.earth-date {
+      display: flex;
+      column-gap: 10px;
+      justify-content: center;
+      align-items: center;
+    input {
+      width: 50px;
+      border-radius: 10px;
+      padding: 8px;
+    }
+  }
+}
