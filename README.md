@@ -1,5 +1,5 @@
 # NASA APP
-Front desarrollado por Estrella Portocarrero utilizando React Js. 
+Front desarrollado por Estrella Portocarrero utilizando React Js y [NASA API.](https://api.nasa.gov/)
 
 ## Instrucciones de instalación
 ```
